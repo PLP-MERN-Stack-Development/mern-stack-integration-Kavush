@@ -32,28 +32,30 @@ cd client
 npm install
 npm start
 
-📁 Project Structure
-mern-blog/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
+## 📁 Project Structure
+```mern-blog/
+├── client/ # React front-end
+│ ├── public/ # Static files
+│ ├── src/ # React source code
+│ │ ├── components/ # Reusable components
+│ │ ├── pages/ # Page components
+│ │ ├── hooks/ # Custom React hooks
+│ │ ├── services/ # API services
+│ │ ├── context/ # React context providers
+│ │ └── App.jsx # Main application component
+│ └── package.json # Client dependencies
+├── server/ # Express.js back-end
+│ ├── config/ # Configuration files
+│ ├── controllers/ # Route controllers
+│ ├── models/ # Mongoose models
+│ ├── routes/ # API routes
+│ ├── middleware/ # Custom middleware
+│ ├── utils/ # Utility functions
+│ ├── server.js # Main server file
+│ └── package.json # Server dependencies
+└── README.md # Project documentation
+```
+
 
 🛠 Development Scripts
 1. Backend Scripts
