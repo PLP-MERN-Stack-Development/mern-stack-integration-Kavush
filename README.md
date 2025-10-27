@@ -72,6 +72,7 @@ npm run eject    # Eject from Create React App
 Base URL
 http://localhost:5000/api
 
+
 🔑 Authentication Endpoints
 Register User
 POST /users/register
@@ -130,25 +131,28 @@ json
 1. Backend Setup
 bash
 # Clone and install
-cd server
+```cd server```
 npm install
 
 # Environment setup
-echo "MONGODB_URI=mongodb://localhost:27017/mern-blog
+```echo "MONGODB_URI=mongodb://localhost:27017/mern-blog
 PORT=5000
 NODE_ENV=development" > .env
+```
 
 # Start server
-npm run dev
+```npm run dev```
 2. Frontend Setup
 bash
-cd client
+```cd client
 npm install
 npm start
+```
 3. Seed Sample Data
 bash
-cd server
+```cd server
 node scripts/seedData.js
+```
 🗄 Database Models
 Post
 javascript
