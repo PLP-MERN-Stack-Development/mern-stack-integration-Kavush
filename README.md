@@ -54,6 +54,7 @@ mern-blog/
 │   ├── server.js           # Main server file
 │   └── package.json        # Server dependencies
 └── README.md               # Project documentation
+<<<<<<< HEAD
 
 🛠 Development Scripts
 1. Backend Scripts
@@ -126,3 +127,46 @@ Set NODE_ENV=production and build frontend for deployment.
 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+=======
+```
+
+## Getting Started
+
+1. Accept the GitHub Classroom assignment invitation
+2. Clone your personal repository that was created by GitHub Classroom
+3. Follow the setup instructions in the `Week4-Assignment.md` file
+4. Complete the tasks outlined in the assignment
+
+## Files Included
+
+- `Week4-Assignment.md`: Detailed assignment instructions
+- Starter code for both client and server:
+  - Basic project structure
+  - Configuration files
+  - Sample models and components
+
+## Requirements
+
+- Node.js (v18 or higher)
+- MongoDB (local installation or Atlas account)
+- npm or yarn
+- Git
+
+## Submission
+
+Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+
+1. Complete both the client and server portions of the application
+2. Implement all required API endpoints
+3. Create the necessary React components and hooks
+4. Document your API and setup process in the README.md
+5. Include screenshots of your working application
+
+## Resources
+
+- [MongoDB Documentation](https://docs.mongodb.com/)
+- [Express.js Documentation](https://expressjs.com/)
+- [React Documentation](https://react.dev/)
+- [Node.js Documentation](https://nodejs.org/en/docs/)
+- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+>>>>>>> 8b97f325fbc8aa566ea30610ee5e62326d2b7dce

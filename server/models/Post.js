@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import mongoose from 'mongoose';
+=======
+// Post.js - Mongoose model for blog posts
+
+const mongoose = require('mongoose');
+>>>>>>> 8b97f325fbc8aa566ea30610ee5e62326d2b7dce
 
 const PostSchema = new mongoose.Schema(
   {
@@ -61,11 +67,15 @@ const PostSchema = new mongoose.Schema(
       },
     ],
   },
+<<<<<<< HEAD
   { 
     timestamps: true,
     toJSON: { virtuals: true },
     toObject: { virtuals: true }
   }
+=======
+  { timestamps: true }
+>>>>>>> 8b97f325fbc8aa566ea30610ee5e62326d2b7dce
 );
 
 // Create slug from title before saving
@@ -88,19 +98,32 @@ PostSchema.virtual('url').get(function () {
 });
 
 // Method to add a comment
+<<<<<<< HEAD
 PostSchema.methods.addComment = async function (userId, content) {
   this.comments.push({ 
     user: userId, 
     content,
     createdAt: new Date()
   });
+=======
+PostSchema.methods.addComment = function (userId, content) {
+  this.comments.push({ user: userId, content });
+>>>>>>> 8b97f325fbc8aa566ea30610ee5e62326d2b7dce
   return this.save();
 };
 
 // Method to increment view count
+<<<<<<< HEAD
 PostSchema.methods.incrementViewCount = async function () {
+=======
+PostSchema.methods.incrementViewCount = function () {
+>>>>>>> 8b97f325fbc8aa566ea30610ee5e62326d2b7dce
   this.viewCount += 1;
   return this.save();
 };
 
+<<<<<<< HEAD
 export default mongoose.model('Post', PostSchema);
+=======
+module.exports = mongoose.model('Post', PostSchema); 
+>>>>>>> 8b97f325fbc8aa566ea30610ee5e62326d2b7dce
