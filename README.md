@@ -218,14 +218,26 @@ PORT=5000
 NODE_ENV=production
 JWT_SECRET=your_secret_key
 
-🏗️ Build Commands
-# Build client
-cd client
-npm run build
+## 🏗️ Build Command
 
-# Start server (production)
-cd ../server
-npm start
+```bash
+npm run build
+```
+
+📋 Response Format
+✅ Success
+{
+  "success": true,
+  "data": { ... },
+  "message": "Operation successful"
+}
+
+❌ Error
+{
+  "success": false,
+  "error": "Error message",
+  "details": { ... }
+}
 
 
 # Frontend
@@ -246,7 +258,6 @@ json
   "details": { ... }
 }
 🎯 Example Usage
-javascript
 // Get all posts
 fetch('/api/posts')
   .then(res => res.json())
@@ -255,7 +266,9 @@ fetch('/api/posts')
 // Create new post
 fetch('/api/posts', {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+  headers: {
+    'Content-Type': 'application/json'
+  },
   body: JSON.stringify({
     title: 'My New Post',
     content: 'Post content...'
