@@ -54,7 +54,6 @@ mern-blog/
 │   ├── server.js           # Main server file
 │   └── package.json        # Server dependencies
 └── README.md               # Project documentation
-<<<<<<< HEAD
 
 🛠 Development Scripts
 1. Backend Scripts
@@ -66,6 +65,7 @@ npm start        # Start development server
 npm run build    # Build for production
 npm test         # Run tests
 npm run eject    # Eject from Create React App
+
 📚 API Documentation
 Base URL
 http://localhost:5000/api
@@ -111,6 +111,112 @@ PUT /posts/:id
 }
 4. Delete Post
 DELETE /posts/:id
+
+📂 Categories Endpoints
+Get All Categories
+GET /categories
+
+Create Category
+POST /categories
+
+json
+{
+  "name": "Technology",
+  "description": "Tech related posts"
+}
+⚡ Quick Setup
+1. Backend Setup
+bash
+# Clone and install
+cd server
+npm install
+
+# Environment setup
+echo "MONGODB_URI=mongodb://localhost:27017/mern-blog
+PORT=5000
+NODE_ENV=development" > .env
+
+# Start server
+npm run dev
+2. Frontend Setup
+bash
+cd client
+npm install
+npm start
+3. Seed Sample Data
+bash
+cd server
+node scripts/seedData.js
+🗄 Database Models
+Post
+javascript
+{
+  title: String,
+  content: String,
+  author: ObjectId,
+  category: ObjectId,
+  tags: [String],
+  isPublished: Boolean,
+  slug: String
+}
+Category
+javascript
+{
+  name: String,
+  description: String
+}
+User
+javascript
+{
+  username: String,
+  email: String,
+  password: String
+}
+🚀 Production Deployment
+Environment Variables
+env
+MONGODB_URI=your_mongodb_atlas_uri
+PORT=5000
+NODE_ENV=production
+JWT_SECRET=your_secret_key
+Build Commands
+bash
+# Backend
+npm start
+
+# Frontend
+npm run build
+📋 Response Format
+Success
+json
+{
+  "success": true,
+  "data": { ... },
+  "message": "Operation successful"
+}
+Error
+json
+{
+  "success": false,
+  "error": "Error message",
+  "details": { ... }
+}
+🎯 Example Usage
+javascript
+// Get all posts
+fetch('/api/posts')
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+// Create new post
+fetch('/api/posts', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    title: 'My New Post',
+    content: 'Post content...'
+  })
+});
 
 
 🚀  Deployment Ready
