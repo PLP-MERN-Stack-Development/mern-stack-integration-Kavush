@@ -74,30 +74,48 @@ http://localhost:5000/api
 
 
 🔑 Authentication Endpoints
-Register User
+Re## 🔑 Authentication Endpoints
+
+### 🧍 Register User
+**Endpoint:**  
+```http
 POST /users/register
+```
+Request Body:
 {
   "username": "john",
   "email": "john@email.com",
   "password": "password123"
 }
+🔐 Login User
 
-Login User
+Endpoint:
 POST /users/login
+Request Body:
 {
   "email": "john@email.com",
   "password": "password123"
 }
+
 📝 Posts Endpoints
-Get All Posts
+📄 Get All Posts
+
+Endpoint:
 GET /posts
 
-Query params: ?page=1&limit=10&category=tech
 
-1. Get Single Post
+Query params: 
+?page=1&limit=10&category=tech
+
+📘 Get Single Post
+
+Endpoint:
 GET /posts/:id
-2. Create Post
+
+🆕 Create Post
+Endpoint:
 POST /posts
+Request Body:
 {
   "title": "Post Title",
   "content": "Post content...",
@@ -106,56 +124,69 @@ POST /posts
   "tags": ["tech", "web"],
   "isPublished": true
 }
-3. Update Post
+
+✏️ Update Post
+
+Endpoint:
 PUT /posts/:id
+Request Body:
 {
   "title": "Updated Title",
   "content": "Updated content..."
 }
-4. Delete Post
+
+🗑️ Delete Post
+
+Endpoint:
 DELETE /posts/:id
 
 📂 Categories Endpoints
-Get All Categories
+📚 Get All Categories
+
+Endpoint:
 GET /categories
 
-Create Category
+➕ Create Category
+
+Endpoint:
 POST /categories
 
-json
+Request Body:
 {
   "name": "Technology",
   "description": "Tech related posts"
 }
+
 ⚡ Quick Setup
-1. Backend Setup
-bash
-# Clone and install
-```cd server```
+🖥️ Backend Setup
+# Navigate to the server directory
+cd server
+
+# Install dependencies
 npm install
 
-# Environment setup
-```echo "MONGODB_URI=mongodb://localhost:27017/mern-blog
-PORT=5000
-NODE_ENV=development" > .env
-```
+# Run development server
+npm run dev
 
-# Start server
-```npm run dev```
-2. Frontend Setup
-bash
-```cd client
+💻 Frontend Setup
+# Navigate to the client directory
+cd client
+
+# Install dependencies
 npm install
+
+# Start the React development server
 npm start
-```
+
 3. Seed Sample Data
 bash
 ```cd server
 node scripts/seedData.js
 ```
-🗄 Database Models
-Post
-javascript
+## 🗄 Database Models
+
+### 📘 Post
+```javascript
 {
   title: String,
   content: String,
@@ -165,30 +196,37 @@ javascript
   isPublished: Boolean,
   slug: String
 }
-Category
-javascript
+```
+🏷 Category
 {
   name: String,
   description: String
 }
-User
-javascript
+
+👤 User
 {
   username: String,
   email: String,
   password: String
 }
+
 🚀 Production Deployment
 Environment Variables
-env
+Create a .env file in your server/ directory and add:
 MONGODB_URI=your_mongodb_atlas_uri
 PORT=5000
 NODE_ENV=production
 JWT_SECRET=your_secret_key
-Build Commands
-bash
-# Backend
+
+🏗️ Build Commands
+# Build client
+cd client
+npm run build
+
+# Start server (production)
+cd ../server
 npm start
+
 
 # Frontend
 npm run build
