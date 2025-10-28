@@ -52,7 +52,7 @@ npm start
 
 
 ## 📁 Project Structure
-```mern-blog/
+mern-blog/
 ├── client/                 # React front-end
 │   ├── public/             # Static files
 │   ├── src/                # React source code
@@ -75,15 +75,21 @@ npm start
 │   └── package.json        # Server dependencies
 │
 └── README.md               # Project documentation
-```
-📚 API Documentation
-Base URL
+
+## 📚 API Documentation
+
+### Base URL
 http://localhost:5000/api
 
-🔑 Authentication Endpoints
-🧍 Register User
-POST /users/register
-Request Body:
+
+---
+
+### 🔑 Authentication Endpoints
+
+#### 🧍 Register User
+**POST** `/users/register`  
+**Request Body:**
+```json
 {
   "username": "john",
   "email": "john@email.com",
